@@ -9,7 +9,6 @@ import java.util.List;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
 
 public class RentalTests1 {
     private RentalInfo rentalReceipt;

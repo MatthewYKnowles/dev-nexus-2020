@@ -62,32 +62,6 @@ public class RentalTests3 {
 
     @Ignore
     @Test
-    public void rentAChildrensMovieForFourDays() {
-        String receipt =
-                "Rental Record for Martin\n" +
-                        "\tInside Out\t3.0\n" +
-                        "Amount owed is 3.0\n" +
-                        "You earned 1 frequent renter points\n";
-        List<MovieRental> rentals = Collections.singletonList(new MovieRental("F003", 4));
-        Customer customer = new Customer("Martin", rentals);
-        assertThat(rentalReceipt.statement(customer), is(receipt));
-    }
-
-    @Ignore
-    @Test
-    public void rentAChildrensMovieForThreeDays() {
-        String receipt =
-                "Rental Record for Martin\n" +
-                        "\tInside Out\t1.5\n" +
-                        "Amount owed is 1.5\n" +
-                        "You earned 1 frequent renter points\n";
-        List<MovieRental> rentals = Collections.singletonList(new MovieRental("F003", 3));
-        Customer customer = new Customer("Martin", rentals);
-        assertThat(rentalReceipt.statement(customer), is(receipt));
-    }
-
-    @Ignore
-    @Test
     public void rentTwoNewMoviesForOneAndFiveDays() {
         String receipt =
                 "Rental Record for Martin\n" +
@@ -122,6 +96,19 @@ public class RentalTests3 {
                         "Amount owed is 6\n" +
                         "You earned 1 frequent renter points\n";
         List<MovieRental> rentals = Collections.singletonList(new MovieRental("F004", 2));
+        Customer customer = new Customer("Martin", rentals);
+        assertThat(rentalReceipt.statement(customer), is(receipt));
+    }
+
+    @Ignore
+    @Test
+    public void rentOneRegularMovieForTwoDays() {
+        String receipt =
+                "Rental Record for Martin\n" +
+                        "\tStar Wars\t2.0\n" +
+                        "Amount owed is 2.0\n" +
+                        "You earned 1 frequent renter points\n";
+        List<MovieRental> rentals = Collections.singletonList(new MovieRental("F001", 2));
         Customer customer = new Customer("Martin", rentals);
         assertThat(rentalReceipt.statement(customer), is(receipt));
     }
