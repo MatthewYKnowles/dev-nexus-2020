@@ -1,6 +1,7 @@
 package com.greatersum.rental;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -19,6 +20,7 @@ public class RentalTests {
         rentalReceipt = new RentalInfo();
     }
 
+    @Ignore
     @Test
     public void rentTwoRegularMovies() {
         String receipt =
@@ -32,6 +34,7 @@ public class RentalTests {
         assertThat(rentalReceipt.statement(customer), is(receipt));
     }
 
+    @Ignore
     @Test
     public void rentAChildrensMovieForOneDay() {
         String receipt =
@@ -44,7 +47,7 @@ public class RentalTests {
         assertThat(rentalReceipt.statement(customer), is(receipt));
     }
 
-
+    @Ignore
     @Test
     public void rentAChildrensMovieForFiveDays() {
         String receipt =
@@ -57,7 +60,7 @@ public class RentalTests {
         assertThat(rentalReceipt.statement(customer), is(receipt));
     }
 
-
+    @Ignore
     @Test
     public void rentAChildrensMovieForFourDays() {
         String receipt =
@@ -70,6 +73,7 @@ public class RentalTests {
         assertThat(rentalReceipt.statement(customer), is(receipt));
     }
 
+    @Ignore
     @Test
     public void rentAChildrensMovieForThreeDays() {
         String receipt =
@@ -82,7 +86,7 @@ public class RentalTests {
         assertThat(rentalReceipt.statement(customer), is(receipt));
     }
 
-
+    @Ignore
     @Test
     public void rentTwoNewMoviesForOneAndFiveDays() {
         String receipt =
@@ -96,7 +100,7 @@ public class RentalTests {
         assertThat(rentalReceipt.statement(customer), is(receipt));
     }
 
-
+    @Ignore
     @Test
     public void rentOneNewMoviesForThreeDays() {
         String receipt =
@@ -109,6 +113,7 @@ public class RentalTests {
         assertThat(rentalReceipt.statement(customer), is(receipt));
     }
 
+    @Ignore
     @Test
     public void rentOneNewMoviesForTwoDays() {
         String receipt =
