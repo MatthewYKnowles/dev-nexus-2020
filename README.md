@@ -1,5 +1,4 @@
-# refactoring-exercise-java
+# Who Watches the Watchmen: Introducing a Better Metric of Your Codes' Quality
 
-To run the tests:
-
-```gradlew test```
+Basic:
+All: NEGATE_CONDITIONALS,REMOVE_CONDITIONALS
