@@ -19,6 +19,7 @@ public class RentalTests2 {
         rentalReceipt = new RentalInfo();
     }
 
+    @Ignore
     @Test
     public void rentTwoRegularMovies() {
         String expectedReceipt =
